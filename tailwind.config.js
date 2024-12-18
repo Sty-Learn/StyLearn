@@ -11,7 +11,8 @@ export default {
         'dark': '#2A2B2B',
         'grey': '#8E9191',
         'deepGrey': '#8F8F90',
-        'orange': '#EB722F'
+        'orange': '#EB722F',
+        'fadeWhite': '#CBCACF'
       },
       fontFamily: {
         'DM-Sans': ["DM Sans", "serif"],
