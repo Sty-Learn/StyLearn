@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  height: 100vh;
+  margin: 0 auto; 
+  color: white;
+  background: linear-gradient(to right, 
+    #2A2B2B 0%, 
+    #2A2B2B 60%, 
+    #8F8F90 60%, 
+    #8F8F90 100%), 
+    linear-gradient(to bottom, 
+    #8E9191, 
+    #8F8F90);
+  background-blend-mode: soft-light;
+  max-width: 1440px;
+}
