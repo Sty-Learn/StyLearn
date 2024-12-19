@@ -1,22 +1,25 @@
 import React from "react";
 import heroImg from "../assets/hero.svg";
+import { Link } from "react-router-dom";
+import Header from "../components/Header";
 
 const Home = () => {
   return (
     <main>
+        <Header />
       <section className="flex lg:flex-row md:flex-row flex-col justify-between lg:w-[90%] md:w-[90%] w-[95%] mx-auto my-16">
         <div className="lg:w-[45%] md:w-[45%] w-[100%] lg:px-0 md:px-0 px-4 mb-4">
           <h1 className="lg:text-[52px] md:text-[48px] text-[32px] font-Lora font-[800] lg:text-left md:text-left text-center">
-            <span className="text-orange drop-shadow-2xl"> Master</span> Stylus, Unlock New <span className="text-orange drop-shadow-2xl">Possibilities.</span>
+            <span className="text-primary"  style={{ textShadow: '2px 2px rgba(0, 0, 0, 0.2)' }}> Master</span> Stylus, Unlock New <span className="text-primary" style={{ textShadow: '2px 2px rgba(0, 0, 0, 0.2)' }}>Possibilities.</span>
           </h1>
           <p className="lg:text-[24px] md:text-[24px] text-[20px] my-6 lg:leading-10 md:leading-10 leading-6  lg:text-left md:text-left text-center">
             Unlock your potential with immersive courses, real-world projects,
             and a vibrant community of learners. From mastering essential skills
             to exploring cutting-edge innovations, your journey starts here.
           </p>
-          <button className="bg-primary py-4 px-8 font-Lora font-[700] lg:w-[60%] md:w-[50%] w-[100%]  rounded-lg">
+          <Link to="browse"><button className="bg-primary py-4 px-8 font-Lora font-[700] lg:w-[60%] md:w-[50%] w-[100%]  rounded-lg cursor-pointer hover:bg-transparent hover:border-2  hover:border-white">
             Get Started
-          </button>
+          </button></Link>
         </div>
         <div className="lg:w-[32%] md:w-[32%] w-[100%] lg:px-0 md:px-0 px-4 mb-4">
           <img src={heroImg} alt="" />
