@@ -1,9 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import bgImg from "../assets/bg.svg";
 import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
+import CourseSlider from "../components/CourseSlider";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Box from "@mui/material/Box";
 
 const Courses = () => {
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  function CustomTabPanel(props) {
+    const { children, index, ...other } = props;
+
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`simple-tabpanel-${index}`}
+        aria-labelledby={`simple-tab-${index}`}
+        {...other}
+      >
+        {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      </div>
+    );
+  }
+
+  CustomTabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.number.isRequired,
+    value: PropTypes.number.isRequired,
+  };
+
+  function a11yProps(index) {
+    return {
+      id: `simple-tab-${index}`,
+      "aria-controls": `simple-tabpanel-${index}`,
+    };
+  }
+
   return (
     <main>
       <Nav />
@@ -40,9 +80,40 @@ const Courses = () => {
           <img src={bgImg} alt="" />
         </div>
       </section>
-      <section>
-        
-      </section>
+      <Box sx={{ width: "100%" }}>
+        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="basic tabs example"
+          >
+            <Tab label="Technical" {...a11yProps(0)} />
+            <Tab label="Non-Technical" {...a11yProps(1)} />
+          </Tabs>
+        </Box>
+        <CustomTabPanel value={value} index={0}>
+          <CourseSlider />
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={1}>
+          <div className="bg-deepGrey lg:w-[32%] md:w-[32%] w-[100%] flex flex-col rounded-2xl mx-4 h-[380px]">
+            <div className="bg-darkGrey p-6 flex justify-center items-center rounded-tr-2xl rounded-tl-2xl h-[150px]">
+              <img src="" alt="" />
+            </div>
+            <div className="p-4">
+              <h2 className="lg:text-[24px] md:text-[24px] text-[20px] font-Lora font-[600]">
+                Arbitrium DevRel Path
+              </h2>
+              <p className="my-4 text-[16px] font-[300]">
+                Learn the essentials of Developer Relations (DevRel) in the
+                Arbitrum ecosystem. Build skills to engage developers, create
+                impactful content, and grow vibrant blockchain communities.
+              </p>
+              <a href=""> </a>
+            </div>
+          </div>
+        </CustomTabPanel>
+      </Box>
+      <section className="lg:w-[90%] md:w-[90%] w-[95%] mx-auto"></section>
     </main>
   );
 };

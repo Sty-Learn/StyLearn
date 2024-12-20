@@ -19,3 +19,7 @@ body {
   background-blend-mode: soft-light;
   max-width: 1440px;
 }
+
+.slick-slide {
+  margin-right: 15px;
+}
