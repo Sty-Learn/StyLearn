@@ -80,12 +80,29 @@ const Courses = () => {
           <img src={bgImg} alt="" />
         </div>
       </section>
+      <section className="lg:w-[90%] md:w-[90%] w-[95%] mx-auto">
+        <h2 className="lg:text-[42px] md:text-[42px] text-[24px] font-Lora">Courses</h2>
       <Box sx={{ width: "100%" }}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"
+            sx={{
+              ".MuiTabs-flexContainer": {
+                justifyContent: "center", 
+              },
+              ".MuiTab-root": {
+                color: "white", 
+              },
+              ".Mui-selected": {
+                color: "white", 
+              },
+              ".MuiTabs-indicator": {
+                backgroundColor: "#D75127",
+                color: "white", 
+              },
+            }}
           >
             <Tab label="Technical" {...a11yProps(0)} />
             <Tab label="Non-Technical" {...a11yProps(1)} />
@@ -113,7 +130,7 @@ const Courses = () => {
           </div>
         </CustomTabPanel>
       </Box>
-      <section className="lg:w-[90%] md:w-[90%] w-[95%] mx-auto"></section>
+      </section>
     </main>
   );
 };

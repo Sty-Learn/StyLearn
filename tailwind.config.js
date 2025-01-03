@@ -13,7 +13,8 @@ export default {
         'deepGrey': '#8F8F90',
         'orange': '#EB722F',
         'fadeWhite': '#CBCACF',
-        'darkGrey': '#323434'
+        'darkGrey': '#323434',
+        'darkerGrey': '#424240'
       },
       fontFamily: {
         'DM-Sans': ["DM Sans", "serif"],
@@ -21,16 +22,5 @@ export default {
       }
     },
   },
-  plugins: [
-    require('daisyui'),
-  ],
-  daisyui: {
-    themes: [],
-    base: true, 
-    styled: true, 
-    utils: true, 
-    prefix: "",
-    logs: true, 
-    themeRoot: ":root",
-},
+  plugins: [],
 }

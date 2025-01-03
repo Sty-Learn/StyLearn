@@ -1,4 +1,5 @@
 import React from "react";
+import "./connection";
 import {
   createBrowserRouter,
   Route,
@@ -8,6 +9,8 @@ import {
 import Home from "./pages/Home";
 import Layout from "./Layout/Layout";
 import Courses from "./pages/Courses";
+import Learn from "./pages/Learn";
+import DashboardLayout from "./Layout/DashboardLayout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -15,6 +18,9 @@ const router = createBrowserRouter(
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="browse" element={<Courses />} />
+      </Route>
+      <Route index element={<DashboardLayout />}>
+        <Route path="/dashboard" element={<Learn />} />
       </Route>
     </Route>
   )
