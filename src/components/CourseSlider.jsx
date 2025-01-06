@@ -15,34 +15,35 @@ const settings = {
   speed: 2000,
   autoplaySpeed: 2000,
   cssEase: "linear",
-//   responsive: [
-//     {
-//       breakpoint: 1024,
-//       settings: {
-//         slidesToShow: 2,
-//         slidesToScroll: 1,
-//         infinite: true,
-//         dots: true,
-//       },
-//     },
-//     {
-//       breakpoint: 600,
-//       settings: {
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//         initialSlide: 1,
-//         dots: false,
-//       },
-//     },
-//     {
-//       breakpoint: 480,
-//       settings: {
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//         dots: false,
-//       },
-//     },
-//   ],
+  className: 'custom-style',
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 1,
+        dots: false,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+      },
+    },
+  ],
 };
 
 const CourseSlider = () => {
@@ -53,7 +54,7 @@ const CourseSlider = () => {
           <div
             key={info.id}
             // className="bg-deepGrey lg:w-[32%] md:w-[32%] w-[100%] flex flex-col rounded-2xl mx-4 h-[380px]"
-            className="bg-deepGrey  rounded-2xl h-[380px]"
+            className="bg-deepGrey custom-style rounded-2xl h-[380px]"
           >
             <div className="bg-darkGrey p-6 flex justify-center items-center rounded-tr-2xl rounded-tl-2xl h-[150px]">
               <img src={info.icon} alt="" />

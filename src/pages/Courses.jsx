@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
+import MobileNav from "../components/MobileNav";
 
 const Courses = () => {
   const [value, setValue] = useState(0);
@@ -47,6 +48,7 @@ const Courses = () => {
   return (
     <main>
       <Nav />
+      <MobileNav />
       <section className="flex lg:flex-row md:flex-row flex-col justify-between lg:w-[90%] md:w-[90%] w-[95%] mx-auto my-16">
         <div className="lg:w-[50%] md:w-[50%] w-[100%] lg:px-0 md:px-0 px-4 mb-4">
           <h1 className="lg:text-[52px] md:text-[48px] text-[32px] font-Lora font-[800] lg:text-left md:text-left text-center">
@@ -88,24 +90,19 @@ const Courses = () => {
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"
+
             sx={{
               ".MuiTabs-flexContainer": {
                 justifyContent: "center", 
               },
-              ".MuiTab-root": {
+              "&.Mui-selected": {
                 color: "white", 
               },
-              ".Mui-selected": {
-                color: "white", 
-              },
-              ".MuiTabs-indicator": {
-                backgroundColor: "#D75127",
-                color: "white", 
-              },
+
             }}
           >
-            <Tab label="Technical" {...a11yProps(0)} />
-            <Tab label="Non-Technical" {...a11yProps(1)} />
+            <Tab label="Technical" {...a11yProps(0)} sx={{ color: "white" }}/>
+            <Tab label="Non-Technical" {...a11yProps(1)} sx={{ color: "white" }} />
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>

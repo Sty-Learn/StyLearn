@@ -25,3 +25,7 @@ body {
   background-blend-mode: soft-light;
   max-width: 1440px;
 }
+
+.custom-style {
+  margin: 0 4px;
+}

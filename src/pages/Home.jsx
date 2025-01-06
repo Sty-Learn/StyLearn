@@ -2,11 +2,13 @@ import React from "react";
 import heroImg from "../assets/hero.svg";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
+import MobileHeader from "../components/MobileHeader";
 
 const Home = () => {
   return (
     <main>
         <Header />
+        <MobileHeader />
       <section className="flex lg:flex-row md:flex-row flex-col justify-between lg:w-[90%] md:w-[90%] w-[95%] mx-auto my-16">
         <div className="lg:w-[45%] md:w-[45%] w-[100%] lg:px-0 md:px-0 px-4 mb-4">
           <h1 className="lg:text-[52px] md:text-[48px] text-[32px] font-Lora font-[800] lg:text-left md:text-left text-center">

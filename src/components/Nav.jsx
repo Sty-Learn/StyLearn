@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Nav = () => {
   return (
-    <header className='flex justify-between items-center w-[90%] mx-auto py-6'>
+    <header className='lg:flex md:flex hidden justify-between items-center w-[90%] mx-auto py-6'>
         <Link to='/' className='cursor-pointer'><img src={logo} alt="" /></Link>
         <div>
           <div className='hidden'>
