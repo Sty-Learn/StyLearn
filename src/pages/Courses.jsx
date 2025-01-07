@@ -90,19 +90,15 @@ const Courses = () => {
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"
+            textColor="white"
             TabIndicatorProps={{
               style: {
                 backgroundColor: "#D75127",
-                color: "#FFFFFF"
               }}}
             sx={{
               ".MuiTabs-flexContainer": {
                 justifyContent: "center", 
               },
-              ".Mui-selected": {
-                color: "white", 
-              },
-
             }}
           >
             <Tab label="Technical" {...a11yProps(0)} sx={{ color: "white" }}/>

@@ -21,9 +21,7 @@ const DashboardNav = () => {
         {isOpen && (
          <Curriculum />
         )}
-        <button className="bg-primary py-4 px-8 font-Lora font-[700] rounded-lg cursor-pointer hover:bg-transparent hover:border-2  hover:border-white">
-          Connect Wallet
-        </button>
+       <w3m-button />
       </div>
     </header>
   );
