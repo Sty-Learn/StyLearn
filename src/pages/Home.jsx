@@ -43,19 +43,19 @@ const Home = () => {
         </div>
       </section>
       <section className="flex lg:flex-row md:flex-row flex-col justify-between lg:w-[90%] md:w-[90%] w-[95%] mx-auto mb-6 px-6 py-12 rounded-2xl bg-dark/20 backdrop-blur-lg">
-        <div className="lg:w-[23%] md:w-[23%] w-[100%] mb-4">
-            <h2 className="text-[18px] mb-4 font-[500] font-Lora">01. Interactive Learning Module</h2>
+        <div className="lg:w-[23%] md:w-[23%] w-[100%] mb-4 text-white">
+            <h2 className="text-[18px] mb-4 font-[500]  font-Lora">01. Interactive Learning Module</h2>
             <p className="text-[16px] text-fadeWhite">Master Stylus and the Arbitrum ecosystem with interactive tutorials, quizzes, and real-world challenges.</p>
         </div>
-        <div className="lg:w-[23%] md:w-[23%] w-[100%] mb-4">
+        <div className="lg:w-[23%] md:w-[23%] w-[100%] mb-4 text-white">
             <h2 className="text-[18px] mb-4 font-[500] font-Lora">02. Integrated Code Playground</h2>
             <p className="text-[16px] text-fadeWhite">Practice, debug, and test Stylus scripts seamlessly with a built-in, real-time code editor—all within your browser.</p>
         </div>
-        <div className="lg:w-[23%] md:w-[23%] w-[100%] mb-4">
+        <div className="lg:w-[23%] md:w-[23%] w-[100%] mb-4 text-white">
             <h2 className="text-[18px] mb-4 font-[500] font-Lora">03. Comprehensive Resource </h2>
             <p className="text-[16px] text-fadeWhite">Explore comprehensive guides, tools, and documentation to master Stylus and Arbitrum, and stay informed about the latest ecosystem advancements.</p>
         </div>
-        <div className="lg:w-[23%] md:w-[23%] w-[100%] mb-4">
+        <div className="lg:w-[23%] md:w-[23%] w-[100%] mb-4 text-white">
             <h2 className="text-[18px] mb-4 font-[500] font-Lora">04. Onchain Certification</h2>
             <p className="text-[16px] text-fadeWhite">Earn badges and certificates to showcase your skills and achievements to peers and employers.</p>
         </div>

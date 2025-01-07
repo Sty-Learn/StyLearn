@@ -3,6 +3,8 @@ export const courseData = [
       id: 1,
       title: "Basics of Stylus",
       icon: './stylus.svg',
+      lesson: 42,
+      time: 90,
       description:
         "Learn Stylus, a next-generation smart contract language, and unlock the full potential of Arbitrum development.",
       moreInfo: "Unlock the power of Stylus, a cutting-edge smart contract language designed for the Arbitrum ecosystem.",
@@ -13,6 +15,8 @@ export const courseData = [
       id: 2,
       title: "Fundamentals of Rust",
       icon: './rust.svg',
+      lesson: 100,
+      time: 90,
       description:
         "Learn the fundamentals of Rust, a fast and reliable programming language. Build efficient, memory-safe applications with hands-on projects and practical examples.",
       moreInfo: "Rust is a go-to language for building high-performance applications, trusted by industry leaders.",
@@ -23,6 +27,8 @@ export const courseData = [
       id: 3,
       title: "Build with Solidity",
       icon: './solidity.svg',
+      lesson: 60,
+      time: 30,
       description:
         "Master Solidity, the core language for Ethereum smart contracts. Learn to write secure, efficient contracts through hands-on examples and real-world applications.",
       moreInfo: "Rust is a go-to language for building high-performance applications, trusted by industry leaders.",
@@ -33,6 +39,8 @@ export const courseData = [
       id: 4,
       title: "Build with C++",
       icon: './c++.svg',
+      lesson: 90,
+      time: 42,
       description:
         "Master C++, the powerhouse language for high-performance software development. Learn to build efficient, scalable applications through hands-on coding, advanced concepts, and real-world projects.",
       moreInfo: "C++ remains a cornerstone for industries demanding high efficiency, from game development to embedded systems.",
