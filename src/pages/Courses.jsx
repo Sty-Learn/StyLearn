@@ -90,12 +90,16 @@ const Courses = () => {
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"
-
+            TabIndicatorProps={{
+              style: {
+                backgroundColor: "#D75127",
+                color: "#FFFFFF"
+              }}}
             sx={{
               ".MuiTabs-flexContainer": {
                 justifyContent: "center", 
               },
-              "&.Mui-selected": {
+              ".Mui-selected": {
                 color: "white", 
               },
 
@@ -110,8 +114,8 @@ const Courses = () => {
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
           <div className="bg-deepGrey lg:w-[32%] md:w-[32%] w-[100%] flex flex-col rounded-2xl mx-4 h-[380px]">
-            <div className="bg-darkGrey p-6 flex justify-center items-center rounded-tr-2xl rounded-tl-2xl h-[150px]">
-              <img src="" alt="" />
+            <div className="bg-darkGrey p-6 flex justify-center items-center rounded-tr-2xl rounded-tl-2xl h-[150px] ">
+              <img src="https://styles.redditmedia.com/t5_37ukv/styles/communityIcon_ym5iq65016561.jpg?format=pjpg&s=54553abb4396ab3dc8ef601c9ee88420a05ea89a" alt="" className="w-[40%]"/>
             </div>
             <div className="p-4">
               <h2 className="lg:text-[24px] md:text-[24px] text-[20px] font-Lora font-[600]">

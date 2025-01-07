@@ -12,9 +12,12 @@ const settings = {
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
+  centerMode: true,
+  centerPadding: 30,
   speed: 2000,
   autoplaySpeed: 2000,
   cssEase: "linear",
+  
   className: 'custom-style',
   responsive: [
     {
@@ -46,25 +49,33 @@ const settings = {
   ],
 };
 
+const truncateText = (text, maxLength) => {
+  if (text.length > maxLength) {
+    return text.slice(0, maxLength) + "...";
+  }
+  return text;
+};
+
 const CourseSlider = () => {
   return (
     <div className="slider-container">
       <Slider {...settings}>
         {courseData.map((info) => (
-          <div
+          <div 
             key={info.id}
-            // className="bg-deepGrey lg:w-[32%] md:w-[32%] w-[100%] flex flex-col rounded-2xl mx-4 h-[380px]"
-            className="bg-deepGrey custom-style rounded-2xl h-[380px]"
+            className="mx-6"
           >
+            <div className="bg-deepGrey rounded-2xl w-[95%]">
             <div className="bg-darkGrey p-6 flex justify-center items-center rounded-tr-2xl rounded-tl-2xl h-[150px]">
               <img src={info.icon} alt="" />
             </div>
-            <div className="p-4">
+            <div className="px-4 py-8">
               <h2 className="lg:text-[24px] md:text-[24px] text-[20px] font-Lora font-[600]">
                 {info.title}
               </h2>
-              <p className="my-4 text-[16px] font-[300]">{info.description}</p>
+              <p className="my-4 text-[14px] font-[300]"> {truncateText(info.description, 80)}...</p>
               <CourseModal id={info.id} />
+            </div>
             </div>
           </div>
         ))}
