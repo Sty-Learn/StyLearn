@@ -11,6 +11,7 @@ import Layout from "./Layout/Layout";
 import Courses from "./pages/Courses";
 import Learn from "./pages/Learn";
 import DashboardLayout from "./Layout/DashboardLayout";
+import Dashboard from "./pages/Dashboard";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,7 +20,8 @@ const router = createBrowserRouter(
         <Route index element={<Home />} />
         <Route path="browse" element={<Courses />} />
       </Route>
-      <Route path="/dashboard" element={<DashboardLayout />}>
+      <Route path="/dashboard"  element={<Dashboard />} />
+      <Route path="learn" element={<DashboardLayout />}>
         <Route index element={<Learn />} />
       </Route>
     </Route>

@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { courseData } from "../Data/courseData";
 import { Modal, Box } from "@mui/material";
 import { IoTimeSharp } from "react-icons/io5";
-import { useAppKit } from "@reown/appkit/react";
+import { useNavigate } from "react-router-dom";
 
-const CourseModal = ({ id }) => {
+const DashboardModal = ({ id }) => {
   const [showModal, setShowModal] = useState(false);
   const handleCloseModal = () => setShowModal(false);
   const handleOpenModal = () => setShowModal(true);
-  const { open } = useAppKit();
+  const navigate = useNavigate();
 
   const style = {
     position: "absolute",
@@ -48,15 +48,15 @@ const CourseModal = ({ id }) => {
                 <p className="my-4 text-[16px] font-[300]">{info.moreInfo}</p>
                 <p className="my-4 text-[16px] font-[300]">{info.moreInfo2}</p>
                 <p className="my-4 text-[16px] font-[300]">{info.moreInfo3}</p>
-                <button
-                  onClick={() => {
-                    open();
-                    setShowModal(false)
-                  }}
+              {info.status === "enrol" ? (<button onClick={() => navigate('/learn')}
                   className="bg-primary py-3 px-8 font-Lora font-[700] w-[100%] rounded-lg cursor-pointer hover:bg-transparent hover:border-2  hover:border-white"
                 >
-                  Connect Wallet
-                </button>
+                  Enrol
+                </button>) : (<button
+                  className="bg-grey py-3 px-8 font-Lora font-[700] w-[100%] rounded-lg cursor-pointer hover:bg-transparent" disabled
+                >
+                  Coming Soon
+                </button>)}
               </div>
             </div>
           ))}
@@ -66,4 +66,4 @@ const CourseModal = ({ id }) => {
   );
 };
 
-export default CourseModal;
+export default DashboardModal;

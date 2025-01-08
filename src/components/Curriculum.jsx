@@ -2,7 +2,7 @@ import React from "react";
 
 const Curriculum = () => {
   return (
-    <section className="absolute top-24 bg-dark py-12 px-10 lg:w-[70%] md:w-[80%] right-24 z-50 rounded-lg ">
+    <section className="absolute top-24 bg-dark py-12 px-10 lg:w-[70%] md:w-[80%] right-24 z-50 rounded-lg h-[80vh] overflow-y-scroll">
       <div className="flex justify-between border-t border-white pt-8">
         <div className="lg:w-[30%] md:w-[30%] w-[100%]">
           <h2 className="mb-4 font-[700] font-lora">

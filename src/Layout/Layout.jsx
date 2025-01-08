@@ -1,14 +1,19 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import Footer from '../components/Footer'
+import React from "react";
+import { Outlet, Navigate } from "react-router-dom";
+import Footer from "../components/Footer";
+import { useAppKitAccount } from "@reown/appkit/react";
 
 const Layout = () => {
-  return (
-    <div className='flex flex-col h-[100vh]'>
-        <Outlet />
-        <Footer />
-    </div>
-  )
-}
+  const { isConnected } = useAppKitAccount();
 
-export default Layout
+  return isConnected ? (
+    <Navigate to={"/dashboard"} />
+  ) : (
+    <div className="flex flex-col h-[100vh]">
+      <Outlet />
+      <Footer />
+    </div>
+  );
+};
+
+export default Layout;

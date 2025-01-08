@@ -17,7 +17,7 @@ const metadata = {
 }
 
 // 4. Create a AppKit instance
-export const configWallet = () => createAppKit({
+createAppKit({
   adapters: [new EthersAdapter()],
   networks,
   metadata,
@@ -26,6 +26,6 @@ export const configWallet = () => createAppKit({
     analytics: true 
   },
   themeVariables: {
-    '--w3m-accent': '#EB722F',
+    '--w3m-accent': '#D75127',
   }
 })
