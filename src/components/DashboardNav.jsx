@@ -15,13 +15,15 @@ const DashboardNav = () => {
         <Hamburger
           toggled={isOpen}
           toggle={setIsOpen}
-          color="#427142"
+          color="#FFFFFF"
           direction="right"
         />
         {isOpen && (
          <Curriculum />
         )}
+        <div className="bg-dark">
        <w3m-button />
+       </div>
       </div>
     </header>
   );

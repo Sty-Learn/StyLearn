@@ -1,14 +1,34 @@
-import React from 'react'
-import logo from '../assets/favicon.svg'
-import { Link } from 'react-router-dom'
+import React from "react";
+import logo from "../assets/favicon.svg";
+import { Link } from "react-router-dom";
+import { useAppKit, useAppKitAccount } from "@reown/appkit/react";
 
 const MobileNav = () => {
-  return (
-    <header className='lg:hidden md:hidden flex  justify-between items-center w-[90%] mx-auto py-6'>
-    <Link to='/' className='cursor-pointer'><img src={logo} alt="" className='w-[60px] h-[60px]'/></Link>
-    <Link to='browse'> <button className='bg-primary py-4 px-6 font-Lora font-[700] rounded-lg cursor-pointer hover:bg-transparent hover:border-2  hover:border-white text-[16px]'>Connect Wallet</button></Link>
-</header>
-  )
-}
+  const { open } = useAppKit();
+  const { isConnected } = useAppKitAccount();
 
-export default MobileNav
+  return (
+    <header className="lg:hidden md:hidden flex  justify-between items-center w-[90%] mx-auto py-6">
+      {!isConnected ? (
+        <Link to="/" className="cursor-pointer">
+          <img src={logo} alt="" className="w-[60px] h-[60px]" />
+        </Link>
+      ) : (
+        <img src={logo} alt="" className="w-[60px] h-[60px]" />
+      )}
+
+      {!isConnected ? (
+        <button
+          onClick={() => open()}
+          className="bg-primary py-4 px-6 font-Lora font-[700] rounded-lg cursor-pointer hover:bg-transparent hover:border-2  hover:border-white text-[16px]"
+        >
+          Connect Wallet
+        </button>
+      ) : (
+        <w3m-button />
+      )}
+    </header>
+  );
+};
+
+export default MobileNav;
