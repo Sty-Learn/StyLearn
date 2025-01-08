@@ -8,7 +8,7 @@ const DashboardNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="flex justify-between items-center w-[90%] mx-auto py-6">
-      <Link to="/" className="cursor-pointer">
+      <Link to="/dashboard" className="cursor-pointer">
         <img src={logo} alt="" />
       </Link>
       <div className="flex justify-between items-center">
