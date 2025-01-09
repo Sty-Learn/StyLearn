@@ -8,7 +8,7 @@ import { useAppKitAccount } from "@reown/appkit/react";
 const DashboardLayout = () => {
     const { isConnected } = useAppKitAccount()
 
-    return isConnected  && (
+    return !isConnected  ? <Navigate to={"/"} /> : (
     <div >
         <DesktopOnlyPage>
         <DashboardNav />
@@ -18,7 +18,7 @@ const DashboardLayout = () => {
         </div>
         </DesktopOnlyPage>
     </div>
-  )
+  ) 
 }
 
 export default DashboardLayout
