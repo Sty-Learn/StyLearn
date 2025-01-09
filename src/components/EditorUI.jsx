@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
+import files from '../Data/files'
 
 import Editor, { useMonaco } from "@monaco-editor/react";
 
@@ -17,8 +18,9 @@ const EditorUI = () => {
     <Editor
       height="85vh"
       theme="vs-dark"
-      defaultValue="// some comment"
-      defaultLanguage="rust"
+      path={files["main.rs"].name}
+      defaultLanguage={files["main.rs"].language}
+      value={files["main.rs"].value}
     />
     </div>
   );

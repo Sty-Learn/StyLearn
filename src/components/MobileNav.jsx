@@ -25,7 +25,9 @@ const MobileNav = () => {
           Connect Wallet
         </button>
       ) : (
-        <w3m-button />
+        <div className="bg-dark">
+          <w3m-button />
+        </div>
       )}
     </header>
   );

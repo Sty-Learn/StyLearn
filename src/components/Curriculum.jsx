@@ -8,11 +8,11 @@ const Curriculum = () => {
           <h2 className="mb-4 font-[700] font-lora">
             Module 1: Fundamentals of Arbitrum and Stylus
           </h2>
-          <p className="my-2 font-[700] font-Lora">
+          <p className="my-2 font-[700] font-Lora border-primary border-b">
             Introduction to Arbitrum Ecosystem
           </p>
           <ul className="list-disc text-[14px]">
-            <li>Overview of Layer 2 solutions and rollups.</li>
+            <li className="text-primary">Overview of Layer 2 solutions and rollups.</li>
             <li>Arbitrum One, Nova, and Orbit explained.</li>
             <li>
               Why Stylus? Benefits of WASM (WebAssembly) in smart contracts.
