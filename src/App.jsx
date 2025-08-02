@@ -30,7 +30,7 @@ const router = createBrowserRouter(
 
 const App = () => {
   return (
-    <div className="max-w-[1440px] mx-auto font-DM-Sans font-[300]">
+    <div className="max-w-[1550px] mx-auto font-DM-Sans font-[300]">
       <RouterProvider router={router} />
     </div>
   );

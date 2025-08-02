@@ -58,7 +58,7 @@ const Dashboard = () => {
   return !isConnected   ? (
     <Navigate to={"/"} />
   ) : (
-    <main>
+    <main className="container">
       <Nav />
       <MobileNav />
       <section>

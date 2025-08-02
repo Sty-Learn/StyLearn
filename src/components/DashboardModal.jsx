@@ -26,7 +26,7 @@ const DashboardModal = ({ id }) => {
     <div>
       <button onClick={handleOpenModal}>View More...</button>
       <Modal open={showModal} onClose={handleCloseModal}>
-        <Box sx={style} className="w-[90%] lg:w-[30%] md:w-[30%]">
+        <Box sx={style} className="w-[90%] lg:w-[30%] md:w-[30%] text-white border border-white/30">
           {filteredData.map((info) => (
             <div key={info.id}>
               <div className="bg-darkGrey p-6 flex justify-center items-center rounded-tr-2xl rounded-tl-2xl h-[150px]">

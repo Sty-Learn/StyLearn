@@ -9,7 +9,7 @@ const Layout = () => {
   return isConnected ? (
     <Navigate to={"/dashboard"} />
   ) : (
-    <div className="flex flex-col h-[100vh]">
+    <div className="flex flex-col h-[100vh] container">
       <Outlet />
       <Footer />
     </div>

@@ -11,7 +11,13 @@
 }
 
 body {
-  height: 100vh;
+  background: linear-gradient(to right, 
+  #2A2B2B 0%, 
+  #2A2B2B 60%);
+}
+
+.container {
+  height: auto;
   margin: 0 auto; 
   color: white;
   background: linear-gradient(to right, 
@@ -23,7 +29,7 @@ body {
     #8E9191, 
     #8F8F90);
   background-blend-mode: soft-light;
-  max-width: 1440px;
+  max-width: 1550px;
 }
 
 .custom-style {
