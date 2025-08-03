@@ -33,7 +33,7 @@ Earn badges and certificates in form of NFTs to showcase your achievements and s
 ## Links
 
 - [Design](https://www.figma.com/design/e0revywkRMOA5sjPyShMmQ/StyLearn?node-id=0-1&t=vcyHEhsirHEvOc5n-1)
-- [Live Deployment](https://sty-learn.vercel.app/)
+- [Live Deployment](https://sty-learn-i.vercel.app/)
 - [Github](https://github.com/Sty-Learn)
 
 ## Join the Community
@@ -46,6 +46,10 @@ Stay connected and be part of the StyLearn community:
 
 ## Team Members
 
-- Esther Aladi(Product/Community Manager)
+- Mayowa Abikoye(Team Lead/Smart Contract Developer)
 - Oluwakemi Atoyebi(Frontend Developer)
-- Mayowa Abikoye(Smart Contract and Backend Developer)
+
+Course Facilitattors
+
+- Olamide Adetula
+- Mayowa Obisesan
