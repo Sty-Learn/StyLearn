@@ -35,3 +35,7 @@ body {
 .custom-style {
   margin: 4px;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

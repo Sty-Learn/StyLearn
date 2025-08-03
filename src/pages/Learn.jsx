@@ -6,7 +6,7 @@ import { BiSolidSkipNextCircle } from "react-icons/bi";
 
 const Learn = () => {
   return (
-    <main className="text-white w-[90%] mx-auto h-[85vh]  overflow-y-scroll flex justify-between items-baseline">
+    <main className="text-white w-[90%] mx-auto h-[85vh]  overflow-y-scroll flex justify-between items-baseline no-scrollbar">
       <div className="lg:w-[70%] md:w-[70%] w-[100%] py-6 pr-6">
         <div className="border-b border-white/60 py-4 flex items-center justify-between">
           <h2 className="flex items-center lg:text-[24px] md:text-[24px] text-[18px] font-Lora font-[800]">
